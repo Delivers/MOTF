@@ -9,7 +9,7 @@ Museum of the Future Dubai
 - Make sure the user logged-in on the target PC is "Administrator" and has a username/pwd which you're setting in the Remoter
 - Enable access to the Admin shares. Via regedit, set:
 
-1. Click Start, click Run, type regedit, and then press ENTER.
+1. Click Start, click Run, type "regedit", and then press ENTER.
 2. Locate and then click the following registry subkey:
 3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 4. If the LocalAccountTokenFilterPolicy registry entry doesn't exist, follow these steps:
@@ -22,6 +22,7 @@ Museum of the Future Dubai
 
 
 - Turn on File and Printer Sharing
+- Set "Network File and Folder Sharing" for specific folder ! Everyone - Read/Write 
 - Check if Remote Procedure Call (RPC) is running (Services App).
 - If executing commands remotely works, but is very slow (it should be instant!), try with all firewalls disabled
 
