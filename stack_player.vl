@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="OjV6rtL9r4dQMzET7FqaCt" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="NXkDVLkqlOAOzaBfiGaQrF" Location="VL.CoreLib" Version="2023.5.2" />
+  <Patch Id="PGbLRdrLRrePgmQQowo6hA">
+    <Canvas Id="FAXj3dUJcZyQFez3G2nOg5" DefaultCategory="Main" CanvasType="FullCategory">
+      <!--
+
+    ************************ NET_Send ************************
+
+-->
+      <Node Name="NET_Send" Bounds="276,185" Id="SXXrBm4Fo69M524pKOeXMG">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="JtTiZ015R4tOmsjtCo7CQT">
+          <Canvas Id="Puwv5ENPwIEQVDSoP3Zcpe" CanvasType="Group">
+            <Node Bounds="367,384,105,19" Id="QBAnUk9pRawMCdKrczhVdl">
+              <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="OSCClient" />
+              </p:NodeReference>
+              <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+              <Pin Id="MtYysGl5P2xO1QNEt9sTXA" Name="Server" Kind="InputPin" />
+              <Pin Id="Hma0clhx0KhPPPJA3J9Wny" Name="Port" Kind="InputPin" />
+              <Pin Id="Al18v0YsMkBOjrQwMfLbLz" Name="Servers" Kind="InputPin" />
+              <Pin Id="Umu1s3LOnsiLWSUFhrhrWG" Name="Ports" Kind="InputPin" />
+              <Pin Id="DuAhnGJQEG1LVU96QMD6pW" Name="Maximum Bundle Size" Kind="InputPin" />
+              <Pin Id="PJSfQ03V1CxMbW94M9O2DU" Name="Enabled" Kind="InputPin" />
+              <Pin Id="KdKgxs8J2JIPXxPfe5vQSO" Name="Output" Kind="OutputPin" />
+              <Pin Id="TTsu98yWbjrM6ZgWLu1B5U" Name="Data" Kind="OutputPin" />
+              <Pin Id="UDhZHCbyo8FLB0X8tGXODP" Name="Is Open" Kind="OutputPin" />
+              <Pin Id="UaWFc10zLnfOgZTEdpoAog" Name="Bundle Size Exceeded" Kind="OutputPin" />
+            </Node>
+            <Pad Id="KgUNhCCujncPreSRz5poiY" Comment="Server *" Bounds="369,267,84,15" ShowValueBox="true" isIOBox="true" Value="192.168.1.255">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="RgzV6wpYN66N9MiJImhczC" Comment="Port" Bounds="401,312,35,15" ShowValueBox="true" isIOBox="true" Value="4446">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="TJGDOqSJnQwOHb6I7HwS3E" Bounds="477,277,235,38" ShowValueBox="true" isIOBox="true" Value="Specify the target server by providing target IP (or Hostname) and Port">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Overlay Id="Ur8NNvdnnqKLwbj46p9Nfr" Name="First, configure your OSCClient" Bounds="337,206,393,229">
+              <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+            </Overlay>
+            <Pad Id="Qs56EFe1Tu4OTY1mO2GWNC" Bounds="328,170,305,29" ShowValueBox="true" isIOBox="true" Value="Sending data with OSC is easy!">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">14</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Node Bounds="408,619,601,19" Id="EAmjgBTGC5RLZ05yBW3584">
+              <p:NodeReference LastCategoryFullName="Primitive.ValueTuple (7 Items)" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="4026531840" Name="ValueTuple (7 Items)" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="ValueTuple (Create)" />
+              </p:NodeReference>
+              <Pin Id="UvLCKdOqdmzMQoW7zWKEe4" Name="Item 1" Kind="InputPin" />
+              <Pin Id="BAXlmikeifuNFNCMODFDSR" Name="Item 2" Kind="InputPin" />
+              <Pin Id="MQAVPrNO8ZRL8XObcMrf4c" Name="Item 3" Kind="InputPin" />
+              <Pin Id="EqWGBEmCHIxNWmU5b2N2CM" Name="Item 4" Kind="InputPin" />
+              <Pin Id="HXdPDCzhNgmQBzV2fvZUcF" Name="Item 5" Kind="InputPin" />
+              <Pin Id="T4IywRmJLZVMYx6tTZln3c" Name="Item 6" Kind="InputPin" />
+              <Pin Id="Np0pa1B8VBsO52Z90QlxW2" Name="Item 7" Kind="InputPin" />
+              <Pin Id="UzpveUcmdsdLT9kAEUUaal" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="370,941,86,26" Id="SkHU5RGYU6wPfBMFMatRbC">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCClient" LastDependency="VL.IO.OSC.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SendMessage (Empty)" />
+              </p:NodeReference>
+              <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+              <Pin Id="Mhp9ahntOZZOfl0pBtcoiv" Name="Input" Kind="StateInputPin" />
+              <Pin Id="C8o0bu0TXqXNQTmVdm1jqD" Name="Address" Kind="InputPin" />
+              <Pin Id="VFnwbdsrf2vO4Q3zovF2uS" Name="Bundled Per Frame" Kind="InputPin" DefaultValue="True">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="Cjn91zQkAlXOBolWgA85Ld" Name="Apply" Kind="InputPin" />
+              <Pin Id="BNpAmX7FcfuM8eQfYADteQ" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="QTxU9l5p8nFOQIpgGraR53" Comment="Address" Bounds="399,863,71,15" ShowValueBox="true" isIOBox="true" Value="/onData">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="Qs2rUaerhMYQMyU7gajVvJ" Bounds="468,953,151,19" ShowValueBox="true" isIOBox="true" Value="&lt; SendMessage (Empty)">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Node Bounds="368,706,85,26" Id="QFQhIc8pjukPNVScxoHMuv">
+              <p:NodeReference LastCategoryFullName="IO.OSC.OSCClient" LastDependency="VL.IO.OSC.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SendMessage" />
+              </p:NodeReference>
+              <Pin Id="RH0lNMJhuLhN4dGCLXR5YB" Name="Input" Kind="StateInputPin" />
+              <Pin Id="PzlymsP1zyeOztOtQkcHkx" Name="Address" Kind="InputPin" />
+              <Pin Id="IKahENowQNHL6Odo94ybvF" Name="Arguments" Kind="InputPin" />
+              <Pin Id="LzgxikHfN2KQc2LWqEeiwd" Name="Bundled Per Frame" Kind="InputPin" DefaultValue="True">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="NxRjcUuQgq1Mt3docwUdJa" Name="Apply" Kind="InputPin" DefaultValue="False">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="JaoowQTqGFUPQBS6j5JPcP" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="SFt4yohEYrMPNJNGg28OZm" Comment="Address" Bounds="391,517,117,15" ShowValueBox="true" isIOBox="true" Value="/frameplayer">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Overlay Id="Uy4lsVl39cROwDaLwsqLQZ" Name="You can also mix types in one message using tuples" Bounds="338,467,787,295">
+              <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+            </Overlay>
+            <Overlay Id="KNG8JgQZ61OQLoaVFZYXJ4" Name="And send messages without arguments" Bounds="340,802,392,186">
+              <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+            </Overlay>
+            <Pad Id="HKGyIiClG3kNfXvm8Yat6q" Comment="Play" Bounds="708,581,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="NKP6ooC9F5yQPVCaFZAuYN" Comment="Seek" Bounds="807,573,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="ORyidrdb871LVZJOq7bzEv" Comment="Increment every Nth frame" Bounds="410,569,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="OHzfpkg8A9fPaZUe8mGfKh" Comment="Server IP" Bounds="608,539,89,15" ShowValueBox="true" isIOBox="true" Value="192.168.1.186">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="HFzy50NLxqjL7oGhJ7GyXp" Comment="Client IP" Bounds="905,535,89,15" ShowValueBox="true" isIOBox="true" Value="192.168.1.186">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="CvbmO7faB1mNzaggxjbC9f" Comment="Port" Bounds="1006,588,35,15" ShowValueBox="true" isIOBox="true" Value="7777">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <ControlPoint Id="CK84DNQTqAVMWun37PPqH1" Bounds="369,248" />
+            <ControlPoint Id="LB10L5TwgexOfZgPSvVQok" Bounds="403,290" />
+            <ControlPoint Id="CDDkx82sUNYNfDQ2NJBxaN" Bounds="486,324" />
+            <ControlPoint Id="OovGP9i4UvYNt4KfDZ16F4" Bounds="410,541" />
+            <ControlPoint Id="C4reNn2QlrNNcUaTYq5Ave" Bounds="509,584" />
+            <ControlPoint Id="DrTOAMDoylXNjKfjhA85dz" Bounds="609,520" />
+            <ControlPoint Id="SHqAwXzmK5vORXdRr90jJo" Bounds="708,557" />
+            <ControlPoint Id="Hm5n8L3nlFhPSYQspRrxoL" Bounds="807,552" />
+            <ControlPoint Id="Ph6OjiJI8OdO9XMBx7rd0H" Bounds="905,509" />
+            <ControlPoint Id="SeZA0uxCwmNPGos5RNOn6r" Bounds="1006,562" />
+            <Pad Id="Cl1VOt8D9qcQdoVeovkH52" Bounds="509,603,35,15" ShowValueBox="true" isIOBox="true">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="OqpeqxsTfqUQPjKRemKtyy" Comment="Enable" Bounds="533,352,35,35" ShowValueBox="true" isIOBox="true" />
+          </Canvas>
+          <ProcessDefinition Id="NujsMhpQwryMRDAY5Ha83v">
+            <Fragment Id="UzSne1UgGjZM4jUWq6stQj" Patch="SoN5TOedQ8CMNoK1v8xBMr" Enabled="true" />
+            <Fragment Id="CpZPFaNCd8FQSE8517Yd0v" Patch="Fir4LV7OYveMP55tVUILV3" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="EdSYlcVuNOPN4jM16MV317" Ids="KgUNhCCujncPreSRz5poiY,MtYysGl5P2xO1QNEt9sTXA" />
+          <Link Id="Vh2Juxe6qC4LWRSBDxoKg1" Ids="RgzV6wpYN66N9MiJImhczC,Hma0clhx0KhPPPJA3J9Wny" />
+          <Link Id="FdtlaBaZcIzMRQRnyWLjSl" Ids="QTxU9l5p8nFOQIpgGraR53,C8o0bu0TXqXNQTmVdm1jqD" />
+          <Link Id="GPHBb7DAwWjLram7lJ7JdI" Ids="UzpveUcmdsdLT9kAEUUaal,IKahENowQNHL6Odo94ybvF" />
+          <Link Id="I5TLHs5UayTLi8ahFAzaCN" Ids="SFt4yohEYrMPNJNGg28OZm,PzlymsP1zyeOztOtQkcHkx" />
+          <Link Id="T8hlDvRxPpuP55H0YFCleX" Ids="JaoowQTqGFUPQBS6j5JPcP,Mhp9ahntOZZOfl0pBtcoiv" />
+          <Link Id="UgK1ZtqOK0xL8dL9ix6n1Y" Ids="KdKgxs8J2JIPXxPfe5vQSO,RH0lNMJhuLhN4dGCLXR5YB" />
+          <Link Id="KCg29oYCT64MAaJ6eyVLw0" Ids="HKGyIiClG3kNfXvm8Yat6q,EqWGBEmCHIxNWmU5b2N2CM" />
+          <Link Id="OH6FBJghK33NyD8uhiYvQH" Ids="NKP6ooC9F5yQPVCaFZAuYN,HXdPDCzhNgmQBzV2fvZUcF" />
+          <Link Id="JPFLrrgxyM5M8swHJnnmM0" Ids="ORyidrdb871LVZJOq7bzEv,UvLCKdOqdmzMQoW7zWKEe4" />
+          <Link Id="PHLNc0wd5eMPqL8scBNyRg" Ids="OHzfpkg8A9fPaZUe8mGfKh,MQAVPrNO8ZRL8XObcMrf4c" />
+          <Link Id="QyfJuSTwqp9PtSurlu93uj" Ids="HFzy50NLxqjL7oGhJ7GyXp,T4IywRmJLZVMYx6tTZln3c" />
+          <Link Id="VoOmwF53y61LegaLMqQEv4" Ids="CvbmO7faB1mNzaggxjbC9f,Np0pa1B8VBsO52Z90QlxW2" />
+          <Link Id="T9pRcFH3qY4QRQmT9OtrBj" Ids="AjsZl7ZsfqWMykIHEItP1Q,CK84DNQTqAVMWun37PPqH1" IsHidden="true" />
+          <Link Id="T18JA41iYddPeFCPDELuYP" Ids="CK84DNQTqAVMWun37PPqH1,KgUNhCCujncPreSRz5poiY" />
+          <Link Id="RiWQcU2QL80MNutBekoVA0" Ids="PsvOaaXBdNMNA41AMwFeef,LB10L5TwgexOfZgPSvVQok" IsHidden="true" />
+          <Link Id="RVTp6p9t5hcPCCWZoH7AaA" Ids="LB10L5TwgexOfZgPSvVQok,RgzV6wpYN66N9MiJImhczC" />
+          <Link Id="Qu9Wt93G0XFP2tXlJcRkad" Ids="J28qr8Dz3OsNrk0EQ1EIl8,CDDkx82sUNYNfDQ2NJBxaN" IsHidden="true" />
+          <Link Id="U6FIylkijfmPHwoTOH4mlT" Ids="FIWkkbtUnkqQAS2LFMpUmr,OovGP9i4UvYNt4KfDZ16F4" IsHidden="true" />
+          <Link Id="FMr3Qys5cCmPl1rnFqXt6P" Ids="OovGP9i4UvYNt4KfDZ16F4,ORyidrdb871LVZJOq7bzEv" />
+          <Link Id="HB8CvhTI3keLDYQv0PxdvN" Ids="V0Bp5RQO56mMgHTRMjAYyX,C4reNn2QlrNNcUaTYq5Ave" IsHidden="true" />
+          <Link Id="Ueg1EvTtjWFL60z5FWk7cK" Ids="KZ9A7QtbdleOQ3fUZkTRAW,DrTOAMDoylXNjKfjhA85dz" IsHidden="true" />
+          <Link Id="KjLaLv4EoFwOlyNPSyOLci" Ids="DrTOAMDoylXNjKfjhA85dz,OHzfpkg8A9fPaZUe8mGfKh" />
+          <Link Id="OwSYxSSwICQNOtq688SeXl" Ids="Gkwzkdk4umCQQ3tVFJojvJ,SHqAwXzmK5vORXdRr90jJo" IsHidden="true" />
+          <Link Id="MvD5qv25htgNky5TrvExFl" Ids="SHqAwXzmK5vORXdRr90jJo,HKGyIiClG3kNfXvm8Yat6q" />
+          <Link Id="MxUejqT2i8wMub6PJcLruJ" Ids="FUbbMwYUV4FQCk1jkxlOZr,Hm5n8L3nlFhPSYQspRrxoL" IsHidden="true" />
+          <Link Id="P1p2ng4oIZVOLmeHNA1QdP" Ids="Hm5n8L3nlFhPSYQspRrxoL,NKP6ooC9F5yQPVCaFZAuYN" />
+          <Link Id="VZH2YRFRCv1QZAdnPOdqCj" Ids="GT5J2NU4pb7L5mJXP0G7CU,Ph6OjiJI8OdO9XMBx7rd0H" IsHidden="true" />
+          <Link Id="FY2GRGpxSSVNSq9c4E3agm" Ids="Ph6OjiJI8OdO9XMBx7rd0H,HFzy50NLxqjL7oGhJ7GyXp" />
+          <Link Id="FYXJ50eSLfMQLtLxLcXVEe" Ids="JAcwWw4ZrWJQNaVm8Zl3mr,SeZA0uxCwmNPGos5RNOn6r" IsHidden="true" />
+          <Link Id="Mytv0cpHR4gNBCZcHqgTCN" Ids="SeZA0uxCwmNPGos5RNOn6r,CvbmO7faB1mNzaggxjbC9f" />
+          <Link Id="UGy3bS2aldeOW49qikaquh" Ids="C4reNn2QlrNNcUaTYq5Ave,Cl1VOt8D9qcQdoVeovkH52" />
+          <Link Id="HumQRMn8ca5NKBhnT5KnJa" Ids="Cl1VOt8D9qcQdoVeovkH52,BAXlmikeifuNFNCMODFDSR" />
+          <Patch Id="SoN5TOedQ8CMNoK1v8xBMr" Name="Create" />
+          <Patch Id="Fir4LV7OYveMP55tVUILV3" Name="Update">
+            <Pin Id="AjsZl7ZsfqWMykIHEItP1Q" Name="Server" Kind="InputPin" />
+            <Pin Id="PsvOaaXBdNMNA41AMwFeef" Name="Port" Kind="InputPin" />
+            <Pin Id="FIWkkbtUnkqQAS2LFMpUmr" Name="Increment every Nth frame" Kind="InputPin" />
+            <Pin Id="J28qr8Dz3OsNrk0EQ1EIl8" Name="Enable" Kind="InputPin" />
+            <Pin Id="V0Bp5RQO56mMgHTRMjAYyX" Name="Loop" Kind="InputPin" />
+            <Pin Id="KZ9A7QtbdleOQ3fUZkTRAW" Name="Server IP" Kind="InputPin" />
+            <Pin Id="Gkwzkdk4umCQQ3tVFJojvJ" Name="Play" Kind="InputPin" />
+            <Pin Id="FUbbMwYUV4FQCk1jkxlOZr" Name="Seek" Kind="InputPin" />
+            <Pin Id="GT5J2NU4pb7L5mJXP0G7CU" Name="Client IP" Kind="InputPin" />
+            <Pin Id="JAcwWw4ZrWJQNaVm8Zl3mr" Name="Client Port" Kind="InputPin" />
+          </Patch>
+          <Link Id="P86es44YqkrO71dVB3Akk2" Ids="CDDkx82sUNYNfDQ2NJBxaN,OqpeqxsTfqUQPjKRemKtyy" />
+          <Link Id="JoU9S6uHh7PMnQ9i0d3Ry8" Ids="OqpeqxsTfqUQPjKRemKtyy,PJSfQ03V1CxMbW94M9O2DU" />
+          <Link Id="VGhCuDHqfnSPot0Td2EMkO" Ids="OqpeqxsTfqUQPjKRemKtyy,NxRjcUuQgq1Mt3docwUdJa" />
+          <Link Id="OBgPx8gOi5dP5ej3M6OzOB" Ids="OqpeqxsTfqUQPjKRemKtyy,Cjn91zQkAlXOBolWgA85Ld" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ NET_Receive ************************
+
+-->
+      <Node Name="NET_Receive" Bounds="277,246" Id="KJFQYeYFn6HPYEK9ISXp3M">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="K5g744wZUiGQaGHMJogAQS">
+          <Canvas Id="K16mOefXp8lLm8m9MT5UJD" CanvasType="Group">
+            <Overlay Id="BBRVGMYfOhPL3yjGT3XTTo" Name="First, configure your OSCServer" Bounds="359,163,425,228">
+              <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+            </Overlay>
+            <Node Bounds="389,341,105,19" Id="FNVjYhoyquoO7yZc0R7pmx">
+              <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="OSCServer" />
+              </p:NodeReference>
+              <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+              <Pin Id="PhK3evx325mMxMoHs3AZKj" Name="Listening IP" Kind="InputPin" />
+              <Pin Id="BnFI1yd5dDOMSPRaO1Hd9B" Name="Port" Kind="InputPin" DefaultValue="5555">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="SshAAgaXs8rLIt9DOIXEsJ" Name="Enable Data Preview" Kind="InputPin" DefaultValue="True">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="Tts3yn0dHLDLvgXRcxj3L3" Name="Sort Data Preview" Kind="InputPin" />
+              <Pin Id="S7YO8ILyRP7QVMN9vqPRQD" Name="Reset Data Preview" Kind="InputPin" DefaultValue="False">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="LwkjDtPOmrmNMMtVaYL6MK" Name="Enabled" Kind="InputPin" />
+              <Pin Id="TkxKEzOtGU4Le9BJOtIh9G" Name="Data" Kind="OutputPin" />
+              <Pin Id="Bg2XxgbHFlDNwioy9bONgy" Name="Data Preview" Kind="OutputPin" />
+              <Pin Id="TMpSfTwkreRLfVIUs4oUDD" Name="Is Open" Kind="OutputPin" />
+            </Node>
+            <Pad Id="PQeouPR9FWdQMskzubvgwx" Comment="Listening IP **" Bounds="391,233,41,15" ShowValueBox="true" isIOBox="true" Value="0.0.0.0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="VQUQH8L0SXcOsrcsyR7yi9" Comment="Port" Bounds="411,264,35,15" ShowValueBox="true" isIOBox="true" Value="4446">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="UApMvd31ZIOMIUDwCoEYDX" Comment="Enabled" Bounds="491,297,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="BbGmGlyDJNZN73FEnlD8Te" Bounds="529,234,243,40" ShowValueBox="true" isIOBox="true" Value="Use an OSCServer for each IP:Port you want to listen for OSC messages on">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="LAPgw1ZvWOOLUT62KIkSj0" Comment="Address" Bounds="425,533,71,15" ShowValueBox="true" isIOBox="true" Value="/onData">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="DzTleUoQ8gfLLhiqYRpIvc" Bounds="487,563,151,19" ShowValueBox="true" isIOBox="true" Value="&lt; OSCReceiver (Empty)">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="C9KbB6HoQ3GPhnrazCMQXC" Comment="Address" Bounds="890,529,113,15" ShowValueBox="true" isIOBox="true" Value="/frameplayer">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Overlay Id="PZNKIGAwDrTM0OYx5Qtolp" Name="And receive messages without arguments" Bounds="360,465,407,186">
+              <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+            </Overlay>
+            <Node Bounds="846,553,88,19" Id="Pitrog6SKjQO3wlFjhJsX5">
+              <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="OSCReceiver" />
+              </p:NodeReference>
+              <Pin Id="EB2KlbNkUq6MqWZ4uufPYS" Name="Input" Kind="InputPin" />
+              <Pin Id="C4OXdOlOsPcMKBMizGxRM6" Name="Address" Kind="InputPin" />
+              <Pin Id="VKa1rJYrTG6MM0ZqFMfjlw" Name="Learn" Kind="InputPin" />
+              <Pin Id="O2g0vITxi7LLTfLFX7pMqN" Name="Output" Kind="OutputPin" />
+              <Pin Id="Kmf6Sn6iYXmQb2eWteggw7" Name="Is Learning" Kind="OutputPin" />
+              <Pin Id="TyzaCTwqVVINFd80Vrqpky" Name="On Data" Kind="OutputPin" />
+              <Pin Id="HCgB7d8rTxSNmezaiPXPdF" Name="Address" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="846,603,700,19" Id="Own3s95uakpNg2TfObjYaw">
+              <p:NodeReference LastCategoryFullName="Primitive.ValueTuple (7 Items)" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="4026531840" Name="ValueTuple (7 Items)" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationCallFlag" Name="ValueTuple (Split)" />
+              </p:NodeReference>
+              <Pin Id="JE7FayR9acoMu2esNM57Em" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Vt8xU7IJ9lKLfXiMzdR2xi" Name="Item 1" Kind="OutputPin" />
+              <Pin Id="KGMHHZU8VahMQntksyf9Wm" Name="Item 2" Kind="OutputPin" />
+              <Pin Id="L5xjJEvIAFpQKTbktLAx8Y" Name="Item 3" Kind="OutputPin" />
+              <Pin Id="EXMI6h0c5fnOazV2Hecs68" Name="Item 4" Kind="OutputPin" />
+              <Pin Id="Ov448NTmH40NgFnZrbUBsX" Name="Item 5" Kind="OutputPin" />
+              <Pin Id="NTKLr7nDpamN0SFlYooUPY" Name="Item 6" Kind="OutputPin" />
+              <Pin Id="TpwuyPGXY0GLvGbULEi0Za" Name="Item 7" Kind="OutputPin" />
+            </Node>
+            <Overlay Id="JKl4ksLHao3LktwBEzQ0m0" Name="You can also receive messages mixed using tuples" Bounds="802,466,880,269">
+              <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+            </Overlay>
+            <Node Bounds="389,557,73,19" Id="Oi0MEF3Eo1jLDTwLJ1yumk">
+              <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="OSCReceiver (Empty)" />
+              </p:NodeReference>
+              <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+              <Pin Id="DLD6PWwg2KDLkdqbtBCh4S" Name="Input" Kind="InputPin" />
+              <Pin Id="VaRlIWwmLOnLMxfXsG2es6" Name="Address" Kind="InputPin" />
+              <Pin Id="Tc9lm687jEYPTNS8nLxyoi" Name="Learn" Kind="InputPin" />
+              <Pin Id="DiJ10KxS4XVPRCAuDaIOOP" Name="On Data" Kind="OutputPin" />
+              <Pin Id="MI5RIrj3KCRNcgwSTAQDjZ" Name="Is Learning" Kind="OutputPin" />
+              <Pin Id="MmHFTrFrswcNTXJA92OEKT" Name="Address" Kind="OutputPin" />
+            </Node>
+            <Pad Id="J0qVZ9sOxIqN98KIdWWCTj" Comment="On Data" Bounds="391,599,35,35" ShowValueBox="true" isIOBox="true" />
+            <ControlPoint Id="GW2o8T9kgGDOfWaXbThiY0" Bounds="392,687" />
+            <ControlPoint Id="FpOEdC2yio6QUdtcuVQT9g" Bounds="847,780" />
+            <Pad Id="VUXXQLjlGhGNWmt1dZTkHV" Comment="Play" Bounds="1195,648,35,35" ShowValueBox="true" isIOBox="true">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="L8iwvZanEyOP2VDjbihrNK" Comment="Seek" Bounds="1311,648,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="LCNY3CCQ6ZzQaFqwMxAc0N" Comment="Speed" Bounds="848,657,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="EFDq1QJyzFFPUetvihooj2" Comment="Server IP" Bounds="1080,701,74,15" ShowValueBox="true" isIOBox="true" Value="text">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="Qo0P2aYxzoTNiX2R5GKauo" Comment="Client IP" Bounds="1428,706,74,15" ShowValueBox="true" isIOBox="true" Value="text">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="Fe2JVFXRvOcLksEbqkFuDA" Comment="Port" Bounds="1544,661,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <ControlPoint Id="BN4AAFdce3tLZRxFhDHCZX" Bounds="961,779" />
+            <ControlPoint Id="UIvVIInp4XwNvbP26GLMmw" Bounds="1081,781" />
+            <ControlPoint Id="GLRuBGug5AFLh4lGJeP2FK" Bounds="1196,779" />
+            <ControlPoint Id="LEhFcU20Rd2NZF82ppv4H6" Bounds="1310,778" />
+            <ControlPoint Id="TGURd6YRuVDM3B7mEvD9gr" Bounds="1430,780" />
+            <ControlPoint Id="AsZLxoTN3o6QH3rGysgceT" Bounds="1546,781" />
+            <Pad Id="CNQ8xUy0q7UON8PMliQUfM" Bounds="962,658,35,35" ShowValueBox="true" isIOBox="true">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+          </Canvas>
+          <Patch Id="CJGwVc7p8dsMOXhdVXquZE" Name="Create" />
+          <Patch Id="UQTjYX1gVIYOEDOVZpGzNt" Name="Update">
+            <Pin Id="OnZXeDHTW7wPpPRQ8Ttp2d" Name="On Data" Kind="OutputPin" />
+            <Pin Id="VbUoqgVW8BBLjhke71PRc9" Name="Speed" Kind="OutputPin" />
+            <Pin Id="BKXPCF066S4LzdpMPIPIa8" Name="Loop" Kind="OutputPin" />
+            <Pin Id="GnnecDk9zreMlnnaKae4PI" Name="Server IP" Kind="OutputPin" />
+            <Pin Id="RzW2uS2iOnVLiMgxC7h14q" Name="Play" Kind="OutputPin" />
+            <Pin Id="QjewZLzUYvcO1Szn5o2WYH" Name="Seek" Kind="OutputPin" />
+            <Pin Id="ROWCyN8A5wiMhtSxpyFbM1" Name="Client IP" Kind="OutputPin" />
+            <Pin Id="KaFR3Z4z1esOzLw3efDNJe" Name="Port" Kind="OutputPin" />
+          </Patch>
+          <ProcessDefinition Id="RWfl7rMaEenLVJksmNt38O">
+            <Fragment Id="HnBefrVQFUnK9dejyZcooV" Patch="CJGwVc7p8dsMOXhdVXquZE" Enabled="true" />
+            <Fragment Id="PsusbNwg1BUNaJsQrVO4Pu" Patch="UQTjYX1gVIYOEDOVZpGzNt" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="KJfZ048UYNlOwZy1Jl64D0" Ids="PQeouPR9FWdQMskzubvgwx,PhK3evx325mMxMoHs3AZKj" />
+          <Link Id="Rr2pcp4uOPDNdJeIp27pjy" Ids="VQUQH8L0SXcOsrcsyR7yi9,BnFI1yd5dDOMSPRaO1Hd9B" />
+          <Link Id="BqRgW4XdPhMPZ9m9r4DjKN" Ids="UApMvd31ZIOMIUDwCoEYDX,LwkjDtPOmrmNMMtVaYL6MK" />
+          <Link Id="MVQ6XkjiU8RNbyy2TlKXiZ" Ids="C9KbB6HoQ3GPhnrazCMQXC,C4OXdOlOsPcMKBMizGxRM6" />
+          <Link Id="THTcXB6EqvlMvq5Iho3GTA" Ids="O2g0vITxi7LLTfLFX7pMqN,JE7FayR9acoMu2esNM57Em" />
+          <Link Id="CRrB5yqlRlONTO88V8gtLm" Ids="LAPgw1ZvWOOLUT62KIkSj0,VaRlIWwmLOnLMxfXsG2es6" />
+          <Link Id="HdQIWrn9zonOhnkgxmgzFx" Ids="DiJ10KxS4XVPRCAuDaIOOP,J0qVZ9sOxIqN98KIdWWCTj" />
+          <Link Id="HHZFkzJMcOlMYBrwyowLyG" Ids="TkxKEzOtGU4Le9BJOtIh9G,EB2KlbNkUq6MqWZ4uufPYS" />
+          <Link Id="F5B4WuxsiRqOTy6zWvZJrT" Ids="TkxKEzOtGU4Le9BJOtIh9G,DLD6PWwg2KDLkdqbtBCh4S" />
+          <Link Id="MNYVwpVYwKsOkUw1dZkQI5" Ids="GW2o8T9kgGDOfWaXbThiY0,OnZXeDHTW7wPpPRQ8Ttp2d" IsHidden="true" />
+          <Link Id="K5jsJPNJegvOXPyMx4Sfs2" Ids="J0qVZ9sOxIqN98KIdWWCTj,GW2o8T9kgGDOfWaXbThiY0" />
+          <Link Id="P2XyyZGDHfCQDeM00fm3Ix" Ids="FpOEdC2yio6QUdtcuVQT9g,VbUoqgVW8BBLjhke71PRc9" IsHidden="true" />
+          <Link Id="N1XYQ5NIeSBLPUCCZY7ehA" Ids="EXMI6h0c5fnOazV2Hecs68,VUXXQLjlGhGNWmt1dZTkHV" />
+          <Link Id="Ii5MviFTEhHPQV4m0FLJTo" Ids="Ov448NTmH40NgFnZrbUBsX,L8iwvZanEyOP2VDjbihrNK" />
+          <Link Id="T4MpE7m8cE8QVw6ZSRx2VQ" Ids="Vt8xU7IJ9lKLfXiMzdR2xi,LCNY3CCQ6ZzQaFqwMxAc0N" />
+          <Link Id="Ohv0WGI7yIlNNcKiID5f7W" Ids="LCNY3CCQ6ZzQaFqwMxAc0N,FpOEdC2yio6QUdtcuVQT9g" />
+          <Link Id="Dr6xgMd8LVYQRTDMm83U1O" Ids="L5xjJEvIAFpQKTbktLAx8Y,EFDq1QJyzFFPUetvihooj2" />
+          <Link Id="Dz4utxLiFakMn0Di9jYdD2" Ids="NTKLr7nDpamN0SFlYooUPY,Qo0P2aYxzoTNiX2R5GKauo" />
+          <Link Id="V7GU5qfyrFCMg9gxrtHsjc" Ids="TpwuyPGXY0GLvGbULEi0Za,Fe2JVFXRvOcLksEbqkFuDA" />
+          <Link Id="OztqRHpz7tbOmwZYNUIbqP" Ids="BN4AAFdce3tLZRxFhDHCZX,BKXPCF066S4LzdpMPIPIa8" IsHidden="true" />
+          <Link Id="QIdT2uX9VySMl5bfcT6KOe" Ids="UIvVIInp4XwNvbP26GLMmw,GnnecDk9zreMlnnaKae4PI" IsHidden="true" />
+          <Link Id="KMuVMAEPB1oPHunCNZEFqA" Ids="EFDq1QJyzFFPUetvihooj2,UIvVIInp4XwNvbP26GLMmw" />
+          <Link Id="Iv8LooVNZvUQD4kYSv8pla" Ids="GLRuBGug5AFLh4lGJeP2FK,RzW2uS2iOnVLiMgxC7h14q" IsHidden="true" />
+          <Link Id="Gf2GW3Fe4WVMP0YTSeJCS4" Ids="VUXXQLjlGhGNWmt1dZTkHV,GLRuBGug5AFLh4lGJeP2FK" />
+          <Link Id="LLpn9JvXngbPJdJfOgdxbR" Ids="LEhFcU20Rd2NZF82ppv4H6,QjewZLzUYvcO1Szn5o2WYH" IsHidden="true" />
+          <Link Id="VJUhBE1uZsjMTRyMc6Axy2" Ids="L8iwvZanEyOP2VDjbihrNK,LEhFcU20Rd2NZF82ppv4H6" />
+          <Link Id="MGVHRmhbRkaMJR2hMzQ7Zg" Ids="TGURd6YRuVDM3B7mEvD9gr,ROWCyN8A5wiMhtSxpyFbM1" IsHidden="true" />
+          <Link Id="NVTZWq4t7GTPg6PWn1sxfn" Ids="Qo0P2aYxzoTNiX2R5GKauo,TGURd6YRuVDM3B7mEvD9gr" />
+          <Link Id="MtBvitrk6vILpbScdRn7fe" Ids="AsZLxoTN3o6QH3rGysgceT,KaFR3Z4z1esOzLw3efDNJe" IsHidden="true" />
+          <Link Id="RNVjZQp1TeSO6Heh5Vrxzl" Ids="Fe2JVFXRvOcLksEbqkFuDA,AsZLxoTN3o6QH3rGysgceT" />
+          <Link Id="MNL4f6ouKXBPAbiCSWGMna" Ids="KGMHHZU8VahMQntksyf9Wm,CNQ8xUy0q7UON8PMliQUfM" />
+          <Link Id="KU9ntJ2G9jHMsyOIrrhJN5" Ids="CNQ8xUy0q7UON8PMliQUfM,BN4AAFdce3tLZRxFhDHCZX" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="BayK5BHuVgXPJcAVmv3nzk">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="N2d2HukkpvoLUhPpotrICt">
+        <Canvas Id="IS2SbmPkEu8PtN2hi54lFF" CanvasType="Group">
+          <Pad Id="Qy4btZF9xrKQUp2gt0uklY" Comment="Is Server" Bounds="766,-750,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="-199,-885,85,19" Id="F8cupTttvd2QSg4BUri014">
+            <p:NodeReference LastCategoryFullName="System.Application" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MainLoop" />
+            </p:NodeReference>
+            <Pin Id="PB85zZrzQLqN4p5ElKmdCD" Name="Input" Kind="InputPin" />
+            <Pin Id="V1nqxLlAjneLyTg53MUONI" Name="Max FPS" Kind="InputPin" />
+            <Pin Id="Pd8lOuKis00O5LRII4ZZHz" Name="Is Incremental" Kind="InputPin" />
+            <Pin Id="TdsauHvnY8DOtqCAzG6Qnv" Name="Incremental FPS" Kind="InputPin" />
+            <Pin Id="RmjoAyqZWy5O0haD1ypiHo" Name="Wait Accuracy" Kind="InputPin" />
+            <Pin Id="NxytAa26oLrNQAY0wqCfhy" Name="Max FPS" Kind="OutputPin" />
+            <Pin Id="Kt2NypcTQcxNxF8GMYstnR" Name="Is Incremental" Kind="OutputPin" />
+            <Pin Id="ABPC6z8dcDePEyHOP4amIE" Name="Incremental FPS" Kind="OutputPin" />
+            <Pin Id="SpDaW2BvqJhNN5ABo2EC2T" Name="Wait Accuracy" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PHLZXxulCBoMeLotqYCHnz" Comment="Max FPS" Bounds="-198,-939,35,16" ShowValueBox="true" isIOBox="true" Value="30">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="JuEL2q7DpBUPcBgZKOVBxP" Comment="Is Incremental" Bounds="-99,-941,35,36" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="764,-943,65,19" Id="OyPp8yC2COyL7t7o28aGua">
+            <p:NodeReference LastCategoryFullName="IO.Net" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="IPs (Ethernet)" />
+            </p:NodeReference>
+            <Pin Id="E1RyNc8iD9DP61Tlo4VD5g" Name="Update" Kind="InputPin" />
+            <Pin Id="CplsbC3wpl3P0GUa5mxIHx" Name="Address" Kind="OutputPin" />
+            <Pin Id="TPmowIMQkrJNnqlh3Stcq8" Name="Name" Kind="OutputPin" />
+            <Pin Id="NoZ9o587tFdLTFlBfKruLh" Name="Description" Kind="OutputPin" />
+            <Pin Id="TCc2szJQt9ZLouXSWRd3VB" Name="Is Up" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FkJDD5eeHQ4PnNSsfqvma9" Comment="Address" Bounds="766,-883,135,38" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item>192.168.1.186</Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="764,-800,67,19" Id="G7vntXbmRbUMJw3npWXxBc">
+            <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="=" />
+            </p:NodeReference>
+            <Pin Id="QE5G4zersSNMImj5bCm7HH" Name="Input" Kind="InputPin" />
+            <Pin Id="CoExfmyQknsQFPkBdhRihc" Name="Input 2" Kind="InputPin" />
+            <Pin Id="RBfcoYoz8rIMJgKM3HyuZA" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="EyMaIMwcCPCPdVoOMkpWma" Comment="Server IP" Bounds="183,-635,98,34" ShowValueBox="true" isIOBox="true" Value="192.168.1.255" />
+          <Node Bounds="764,-833,52,19" Id="QKucavspf0YLrtoSPHFPZZ">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="GetSlice" />
+            </p:NodeReference>
+            <Pin Id="NpOJde1eVz8LbqNeHGfn8O" Name="Input" Kind="StateInputPin" />
+            <Pin Id="J0aTKw8PHHzOaGXg3Zl62H" Name="Default Value" Kind="InputPin" />
+            <Pin Id="TVs24nV9azDLdpJFFmnZ2T" Name="Index" Kind="InputPin" />
+            <Pin Id="VBqEhJSCwJwLJYbW0OTqLm" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="200,-197,538,19" Id="D9jgzCUCHrTOr6n4zMOsXE">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="stack_player.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="NET_Receive" />
+            </p:NodeReference>
+            <Pin Id="L4uACBLPemIP6DkCSiNNYu" Name="On Data" Kind="OutputPin" />
+            <Pin Id="BMnk79P78VNQH8F5I9zcon" Name="Speed" Kind="OutputPin" />
+            <Pin Id="Q52Oz9bTQ01NoE8t2nlZCb" Name="Loop" Kind="OutputPin" />
+            <Pin Id="FLM7OdPnJ53PQ3kxCM7iVM" Name="Server IP" Kind="OutputPin" />
+            <Pin Id="FRlv5CoK5C8P96CElyLhBF" Name="Play" Kind="OutputPin" />
+            <Pin Id="BVwwI7iXDyfLUECl3ailLQ" Name="Seek" Kind="OutputPin" />
+            <Pin Id="TjSoatGB4ZoP6Hmyd4n6Nd" Name="Client IP" Kind="OutputPin" />
+            <Pin Id="TwaIGM1dn2qNENBzzDQ6WH" Name="Port" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="185,-430,526,19" Id="IVK4ECSznedN4QKmePt9Ub">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="stack_player.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="NET_Send" />
+            </p:NodeReference>
+            <Pin Id="DI1Ay9Sw2tPL4KPDBiIQuw" Name="Server" Kind="InputPin" />
+            <Pin Id="JP5e7qCJxuCNW3gGHhr4z7" Name="Port" Kind="InputPin" />
+            <Pin Id="BXN6vcLAQxzLCrTIXp926F" Name="Increment every Nth frame" Kind="InputPin" />
+            <Pin Id="M6FLg8tH4LiOIdNak2Vx3p" Name="Enable" Kind="InputPin" />
+            <Pin Id="UV2ZBPUu74bOooQkWvZbNs" Name="Loop" Kind="InputPin" />
+            <Pin Id="MkazSfGeC8jNF0NHCOjfVX" Name="Server IP" Kind="InputPin" />
+            <Pin Id="A43XtTuP68NOTgYETPWAB6" Name="Play" Kind="InputPin" />
+            <Pin Id="JMBOMA5NAx7NNuZ7LXxwFj" Name="Seek" Kind="InputPin" />
+            <Pin Id="AV1fLOleTZONVjA61gHz0b" Name="Client IP" Kind="InputPin" />
+            <Pin Id="GeOvhf1LvLLM3fgFW91kyp" Name="Client Port" Kind="InputPin" />
+            <Pin Id="H0Iy5dfHWCgO1LZIyv4leV" Name="Update" Kind="ApplyPin" />
+          </Node>
+          <Pad Id="CcG2jmZfhl2LSotYYfaT4v" Comment="Port" Bounds="240,-480,35,15" ShowValueBox="true" isIOBox="true" Value="4446">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HU5bhXsKtFQMYWG3Unr965" Comment="Increment every Nth frame" Bounds="291,-570,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HS6IGw9oBFDQVaAUtKKc7K" Comment="Enable OSC" Bounds="343,-530,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LDpjAVQn5wWPw3Dozk5cQu" Comment="Server IP" Bounds="444,-1007,205,38" ShowValueBox="true" isIOBox="true" Value="192.168.1.186">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">17</p:fontsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MPEXAPwN2h1MV27lMW1oId" Comment="Play" Bounds="499,-554,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RKYUngpzl9xOV5hECZfDAH" Comment="Loop" Bounds="396,-488,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="L6t11S7amNiQJE83OJcXHZ" Comment="Seek" Bounds="551,-504,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LXmupu4AFdsPctnlQAYwjZ" Comment="Client IP" Bounds="606,-594,82,15" ShowValueBox="true" isIOBox="true" Value="192.168.1.255">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="A3qCOgpkNdgNxiAJHJGMD1" Comment="On Data" Bounds="202,-147,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="MmrxoiFVeclOMHiOcsKO0l" Comment="Client Port" Bounds="656,-489,46,15" ShowValueBox="true" isIOBox="true" Value="7777">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="VXIbvReiW5rLR9yisiprD2" Comment="Update" Bounds="767,-543,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IhshOTq0TifLFhf9b9F90l" Comment="Server IP" Bounds="430,-134,80,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="-212,-251,80,26" Id="VCm8gJCdXgOL4LCguVyKRW">
+            <p:NodeReference LastCategoryFullName="IO.Path" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="MakeAbsolute" />
+            </p:NodeReference>
+            <Pin Id="E3wkpLSRsp4QHOAfK5doE4" Name="Input" Kind="StateInputPin" />
+            <Pin Id="BVCsPwbJpjCOiYnsK09b5K" Name="Base Path" Kind="InputPin" />
+            <Pin Id="FPwwqLthEukP5o6Bh6RMbK" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="-137,-284,48,19" Id="PH5EPZ1G2PRPClBmQkoDOM">
+            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToPath" />
+            </p:NodeReference>
+            <Pin Id="KV1VXdX5HgdO0w716wzsqG" Name="Input" Kind="InputPin" />
+            <Pin Id="JseEdvAduQ6QKsexLb4n5b" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="-213,-344,48,19" Id="OSy1d8va5Y7LDFaf7mnybK">
+            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ToPath" />
+            </p:NodeReference>
+            <Pin Id="L8b1NlcZI6DPJd1J2aSbes" Name="Input" Kind="InputPin" />
+            <Pin Id="OcIRxK9STh4O6pVTRSMsJF" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="U6SnUPCLIPaOJnIEhIhbFA" Comment="" Bounds="-211,-378,133,23" ShowValueBox="true" isIOBox="true" Value="assets\DDS\">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="-139,-345,87,19" Id="SKQFhrrvKjSPFCHeu6pyLA">
+            <p:NodeReference LastCategoryFullName="System.Application" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ApplicationPath" />
+            </p:NodeReference>
+            <Pin Id="NtqYsfngdVvQbZ3qMWY68M" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Jl72ZXDHkmvNgyipPvLI7s" Comment="" Bounds="-136,-307,228,18" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="ALzqmFmkf8oOiyS8dylO64" Comment="Directory" Bounds="-206,-188,203,18" ShowValueBox="true" isIOBox="true" Value="assets\DDS\\">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:pathtype p:Assembly="VL.Core" p:Type="VL.Core.PathType">Directory</p:pathtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="272,366,396,19" Id="UOJmM5ZAfmvLrwm1nrjXTq">
+            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FramePlayer" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="RZa4hNHvUmmP63w2TiJFlP" Name="Frame Increment" Kind="InputPin" />
+            <Pin Id="GEuLCUcQBGMMUOTTN513Am" Name="Increment every Nth frame" Kind="InputPin" />
+            <Pin Id="GmTHJszJ365PDx0CyuZFak" Name="Loop" Kind="InputPin" />
+            <Pin Id="TlyB0FS7kCbNrWDNZzVfrs" Name="Loop From" Kind="InputPin" />
+            <Pin Id="CFunoAkogqVMupk0F18QMf" Name="Loop To" Kind="InputPin" />
+            <Pin Id="UGQ6WUtBkxNL2c0lNxSSv9" Name="Seek" Kind="InputPin" />
+            <Pin Id="DTu0c3j2YRsLklFYc5XMA8" Name="Seek Frame" Kind="InputPin" />
+            <Pin Id="FKoKdMRgPZyOrv5otc8EpX" Name="Is Server" Kind="InputPin" />
+            <Pin Id="U81nvTyFHFYLczOy7qkfy3" Name="Clients Address" Kind="InputPin" />
+            <Pin Id="KczDOkhfGTBPFabJAYQXRF" Name="Clients Port" Kind="InputPin" />
+            <Pin Id="B3oSCfYCc85NvAOCEZ0rtn" Name="Network reliability threshold" Kind="InputPin" />
+            <Pin Id="GddyH0EOwe5MJlNaAltglW" Name="Offset tolerance threshold" Kind="InputPin" />
+            <Pin Id="QslDAxYJ7kPOBH07jhyzwZ" Name="Frame Id" Kind="OutputPin" />
+            <Pin Id="BtapKJYcPvtMAVmq9QqKS6" Name="Loop From" Kind="OutputPin" />
+            <Pin Id="CDkD4z9nHB3MRMZuY4a94r" Name="Loop To" Kind="OutputPin" />
+            <Pin Id="C7OzNe4LvmrLKaI929RXwW" Name="Seek Frame" Kind="OutputPin" />
+            <Pin Id="Het4NTyGwXhNm3Cj9zACgJ" Name="Frame Increment" Kind="OutputPin" />
+            <Pin Id="KJ4OzPAb6eZPIJpp4eTj9M" Name="Network is reliable" Kind="OutputPin" />
+            <Pin Id="LrQV8392OunPuRtwf9NcIx" Name="Offset to server" Kind="OutputPin" />
+            <Pin Id="MAjgJ69fgtJOYB9HwwTPev" Name="On Adapt to server" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Ke7RbNJ6fWTPRavBFC7mle" Comment="Increment every Nth frame" Bounds="357,160,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DV8IYNDdvcdN2NE2Uwp1EO" Comment="Seek" Bounds="537,158,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Gg5BiXpNnebLPXHbpsDAno" Comment="Clients Port" Bounds="666,201,35,15" ShowValueBox="true" isIOBox="true" Value="7777">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Ta3l3Mn0llwPM9WbQPoiBI" Comment="Clients Address" Bounds="669,153,76,15" ShowValueBox="true" isIOBox="true" Value="192.168.1.255">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="147,613,323,19" Id="PhdkIrcGGEHQRbrVVdSbZv">
+            <p:NodeReference LastCategoryFullName="Video" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ImagePlayer (FrameBased Stride)" />
+            </p:NodeReference>
+            <Pin Id="CtEzLFQpmeQOhHYQaP6ibk" Name="Directory" Kind="InputPin" />
+            <Pin Id="HPrL9dRuJFoQJO7G3jkZMJ" Name="Search Pattern" Kind="InputPin" />
+            <Pin Id="D9LBKMdlwq5QTSswMpUoML" Name="Rescan Directory" Kind="InputPin" />
+            <Pin Id="J8kf99CKMdnLl7LizP18yC" Name="Loop From" Kind="InputPin" />
+            <Pin Id="H1EROXrsemkPz9NSQGdnWp" Name="Loop To" Kind="InputPin" />
+            <Pin Id="OYIfVqfcnhbQS8BaOpmkKH" Name="Seek Frames" Kind="InputPin" />
+            <Pin Id="N4tOc9ACqmWMrcjrEwiEc1" Name="Frame Step Descending" Kind="InputPin" />
+            <Pin Id="Rta0ybubF12OTltDEdTraU" Name="Frame Step Ascending" Kind="InputPin" />
+            <Pin Id="TO7qkovln1VLxegrdUI5Nn" Name="Preload Count" Kind="InputPin" />
+            <Pin Id="EzQzAVrHkFsMU9gkc21Aq4" Name="Is sRGB" Kind="InputPin" />
+            <Pin Id="SFxNYqfrF3NLrzpilr0rHX" Name="Frame to Display" Kind="InputPin" />
+            <Pin Id="PeWUJnSvxfAOj0w05vLdm8" Name="Output" Kind="OutputPin" />
+            <Pin Id="PzS80UxoOb2LkB90PD6Q1x" Name="On Scanning Complete" Kind="OutputPin" />
+            <Pin Id="A9KxIkSLYpzNvgOl6Gq4R1" Name="Frame Count" Kind="OutputPin" />
+            <Pin Id="QNyFTtH5TXbPS1yi4rf99U" Name="Preloaded Frames" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PdDQ8k6VE0mPlyWrqvcTwR" Comment="Network reliability threshold" Bounds="664,226,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="LcMqgaE0d3oLStILAVQkBa" Comment="Offset tolerance threshold" Bounds="664,249,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Hn3LFU9KXlxP5kZ2VjSpWc" Comment="Loop From" Bounds="358,181,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SHar7AkKN5PQCJKI5MyQz7" Comment="Loop To" Bounds="358,199,35,15" ShowValueBox="true" isIOBox="true" Value="-1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="FYJgU2mVl4oNNngFjEiYAh" Comment="Search Pattern" Bounds="181,583,35,15" ShowValueBox="true" isIOBox="true" Value="*.dds">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="ILUtH3gOFNkNr66lxU3iq8" Comment="Seek Frame" Bounds="537,198,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="46,683,285,19" Id="J9mGWZHlaA7QCDaCBAyjYe">
+            <p:NodeReference LastCategoryFullName="Stride.Textures" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="TextureWindow" />
+            </p:NodeReference>
+            <Pin Id="LFxB2emY0jXO7L9q09yxX2" Name="Bounds" Kind="InputPin" DefaultValue="1000, 40, 786, 432" />
+            <Pin Id="AOCp1VKU1RxPVtI6ZghY9G" Name="Save Bounds" Kind="InputPin" />
+            <Pin Id="AbwaIoUlEVQMAL9GIsBshM" Name="Back Buffer Format" Kind="InputPin" />
+            <Pin Id="M3upHqNqiqWLUxSeD7g4vK" Name="Bound to Document" Kind="InputPin" />
+            <Pin Id="PouK0jt99gSL1M3Oxsl8IW" Name="Dialog If Document Changed" Kind="InputPin" />
+            <Pin Id="IDRCAR9EWN9OWhKcqfGO7c" Name="Input" Kind="InputPin" />
+            <Pin Id="SIzyRTnk8t7QBDzEJka7oF" Name="Title" Kind="InputPin" />
+            <Pin Id="T4jI0GG793yN7eD26lGYa5" Name="Clear Color" Kind="InputPin" />
+            <Pin Id="TgNxYtia3qVOLpT7zlFqlP" Name="Clear" Kind="InputPin" />
+            <Pin Id="Nlq18RW1vi4LhYnhfQJGFq" Name="Is Premultiplied Alpha" Kind="InputPin" />
+            <Pin Id="M0sBaa5LpCpNtp0ps8VHR2" Name="Scaling Mode" Kind="InputPin" />
+            <Pin Id="DnBXaoKrIkiOYg4QD3AoAd" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
+            <Pin Id="RuHfZFkUic0MkL6Ll3Oykb" Name="Enabled" Kind="InputPin" />
+            <Pin Id="UeQTBnTV9xNOniCl9am9XB" Name="Show Info String" Kind="InputPin" />
+            <Pin Id="VinTqdbTLXUOh2hRmywF5C" Name="Present Interval" Kind="InputPin" />
+            <Pin Id="TRrEps2l7J8NPEdPbtDOnX" Name="Output" Kind="OutputPin" />
+            <Pin Id="B8W7lEDAAonQYyz3tVswq8" Name="Client Bounds" Kind="OutputPin" />
+            <Pin Id="K2YvDWexKZ0PeSLIjwR4SH" Name="Input Source" Kind="OutputPin" />
+            <Pin Id="NAyPrgecafjMsg9pltulI5" Name="Back Buffer" Kind="OutputPin" />
+          </Node>
+          <Pad Id="NGBUNGJ6RHXPcRUTG8Jh0D" Comment="Present Interval" Bounds="252,656,76,15" ShowValueBox="true" isIOBox="true" Value="Default">
+            <p:TypeAnnotation LastCategoryFullName="Stride.Graphics" LastDependency="Stride.Graphics.dll">
+              <Choice Kind="TypeFlag" Name="PresentInterval" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="MeBQQnUDFH1L2eynIUw7Sf" Comment="Network is reliable" Bounds="553,485,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="FU4RsZFOkWnMmvFsxyBis8" Comment="Offset to server" Bounds="610,576,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="ANiglaQbOUXL6AEvwMGp85" Comment="On Adapt to server" Bounds="666,525,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PKjo4vK4d1APfefVJcGrW0" Comment="Loop" Bounds="358,219,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RAtqvGXfjJSNrFFRqizteE" Bounds="666,171,356,19" ShowValueBox="true" isIOBox="true" Value="(255 here means broadcast to all clients in 192.168.178...)">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LXfUMUw5RyzMxrQXw2BbWm" Comment="Frame Increment (Speed)" Bounds="157,225,39,36" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <ProcessDefinition Id="I4o85oqrcurMQOwyEOckQl">
+          <Fragment Id="IdNXdQENiVSNvNigxM06pA" Patch="LF8A8RtQ32pOIjSku91anN" Enabled="true" />
+          <Fragment Id="SJf0EDnwZRyLPkmasZHzuX" Patch="CiV5Jol7S4xNlCoGUFFo2x" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="Es1zzTPKiJWOfMsNk1JeZ5" Ids="Qy4btZF9xrKQUp2gt0uklY,FKoKdMRgPZyOrv5otc8EpX" />
+        <Link Id="SWtSoZDB724P3ip4QjA2Ce" Ids="PHLZXxulCBoMeLotqYCHnz,V1nqxLlAjneLyTg53MUONI" />
+        <Link Id="DlLzltaB5PPOPNiUWqCWoE" Ids="JuEL2q7DpBUPcBgZKOVBxP,Pd8lOuKis00O5LRII4ZZHz" />
+        <Patch Id="LF8A8RtQ32pOIjSku91anN" Name="Create" />
+        <Patch Id="CiV5Jol7S4xNlCoGUFFo2x" Name="Update" ParticipatingElements="TRFfM1KCSOrMaFndbs54v3,QeOVDtnvWNwNYyEb6uNyga" />
+        <Link Id="LgBvtiWORGdNYNMPCTs1v0" Ids="CplsbC3wpl3P0GUa5mxIHx,FkJDD5eeHQ4PnNSsfqvma9" />
+        <Link Id="KbeY7ccl4z6NyCzL2s9XHs" Ids="FkJDD5eeHQ4PnNSsfqvma9,NpOJde1eVz8LbqNeHGfn8O" />
+        <Link Id="KOpLirLkvqrNIUNnNDLQyc" Ids="VBqEhJSCwJwLJYbW0OTqLm,QE5G4zersSNMImj5bCm7HH" />
+        <Link Id="PonTrSjYdBgNRuZBv2GqE8" Ids="PHLZXxulCBoMeLotqYCHnz,TdsauHvnY8DOtqCAzG6Qnv" />
+        <Link Id="QsWquxLI9StPauXCkAtgRc" Ids="BMnk79P78VNQH8F5I9zcon,Ke7RbNJ6fWTPRavBFC7mle" />
+        <Link Id="U8SljXory90O0uR7brbu0c" Ids="CcG2jmZfhl2LSotYYfaT4v,JP5e7qCJxuCNW3gGHhr4z7" />
+        <Link Id="H83VXcjkOuXOFyAV8XR0Sn" Ids="EyMaIMwcCPCPdVoOMkpWma,DI1Ay9Sw2tPL4KPDBiIQuw" />
+        <Link Id="PPTFzbsXKmJP1bYg6Y9rye" Ids="HU5bhXsKtFQMYWG3Unr965,BXN6vcLAQxzLCrTIXp926F" />
+        <Link Id="HHcdzwY4OdFN2kqDzD0c4W" Ids="HS6IGw9oBFDQVaAUtKKc7K,M6FLg8tH4LiOIdNak2Vx3p" />
+        <Link Id="DzCJuptgt9hNDghneC3oBM" Ids="LDpjAVQn5wWPw3Dozk5cQu,MkazSfGeC8jNF0NHCOjfVX" />
+        <Link Id="GS6Vrxf1GgNL6QGeghtvoN" Ids="MPEXAPwN2h1MV27lMW1oId,A43XtTuP68NOTgYETPWAB6" />
+        <Link Id="JSaObewoKvDLwMKUcKYJ6o" Ids="RKYUngpzl9xOV5hECZfDAH,UV2ZBPUu74bOooQkWvZbNs" />
+        <Link Id="ObeuArhuga3MFhziWhhlC8" Ids="Q52Oz9bTQ01NoE8t2nlZCb,PKjo4vK4d1APfefVJcGrW0" />
+        <Link Id="HvKWvqlQCD4Nbxg1CapwGz" Ids="FRlv5CoK5C8P96CElyLhBF,LXfUMUw5RyzMxrQXw2BbWm" />
+        <Link Id="Q8gSzD8nWAMLt4shfNc30z" Ids="BVwwI7iXDyfLUECl3ailLQ,DV8IYNDdvcdN2NE2Uwp1EO" />
+        <Link Id="MpzvpdjPRAkOvwMc4aQDOp" Ids="L6t11S7amNiQJE83OJcXHZ,JMBOMA5NAx7NNuZ7LXxwFj" />
+        <Link Id="TEypOsP0KqkPMmc61gIouF" Ids="LXmupu4AFdsPctnlQAYwjZ,AV1fLOleTZONVjA61gHz0b" />
+        <Link Id="U5cNeAh099eOTeA31C2gao" Ids="TjSoatGB4ZoP6Hmyd4n6Nd,Ta3l3Mn0llwPM9WbQPoiBI" />
+        <Link Id="TqmQ3aKfKIENNmo1u1JU6H" Ids="TwaIGM1dn2qNENBzzDQ6WH,Gg5BiXpNnebLPXHbpsDAno" />
+        <Link Id="Q6A1BZaALs0Nt0DoEFu57H" Ids="L4uACBLPemIP6DkCSiNNYu,A3qCOgpkNdgNxiAJHJGMD1" />
+        <Link Id="MIvTaZCZMs8NHka9XRMYBm" Ids="MmrxoiFVeclOMHiOcsKO0l,GeOvhf1LvLLM3fgFW91kyp" />
+        <Link Id="VkqUwjGi3CDOFLBj1hgTz5" Ids="VXIbvReiW5rLR9yisiprD2,H0Iy5dfHWCgO1LZIyv4leV" />
+        <Link Id="F2Ry5qvzGcVLVcIIWVMX7e" Ids="LDpjAVQn5wWPw3Dozk5cQu,CoExfmyQknsQFPkBdhRihc" />
+        <Link Id="TRFfM1KCSOrMaFndbs54v3" Ids="Qy4btZF9xrKQUp2gt0uklY,VXIbvReiW5rLR9yisiprD2" />
+        <Link Id="QeOVDtnvWNwNYyEb6uNyga" Ids="Qy4btZF9xrKQUp2gt0uklY,HS6IGw9oBFDQVaAUtKKc7K" />
+        <Link Id="QybGYXfsqUUMTzrOhnfmXF" Ids="FLM7OdPnJ53PQ3kxCM7iVM,IhshOTq0TifLFhf9b9F90l" />
+        <Link Id="GZqrbDKfjuIM2Osdhl3VB9" Ids="RBfcoYoz8rIMJgKM3HyuZA,Qy4btZF9xrKQUp2gt0uklY" />
+        <Link Id="GnrBt6gjmeJMXR9TSCHXgi" Ids="ALzqmFmkf8oOiyS8dylO64,CtEzLFQpmeQOhHYQaP6ibk" />
+        <Link Id="TKL6s8k8FicLAIQ1EBQR0Q" Ids="JseEdvAduQ6QKsexLb4n5b,BVCsPwbJpjCOiYnsK09b5K" />
+        <Link Id="U0E850bFGDoPIUax7REnT8" Ids="U6SnUPCLIPaOJnIEhIhbFA,L8b1NlcZI6DPJd1J2aSbes" />
+        <Link Id="MfCqc5CZ0d3PEAKgkE5O9F" Ids="OcIRxK9STh4O6pVTRSMsJF,E3wkpLSRsp4QHOAfK5doE4" />
+        <Link Id="BP59QQeMqr8OPgN1CCsUTf" Ids="NtqYsfngdVvQbZ3qMWY68M,Jl72ZXDHkmvNgyipPvLI7s" />
+        <Link Id="LKOpLXp5VcLPMN21OvGZlQ" Ids="Jl72ZXDHkmvNgyipPvLI7s,KV1VXdX5HgdO0w716wzsqG" />
+        <Link Id="BdEQx3mxJcqNrRvaPxQsbB" Ids="FPwwqLthEukP5o6Bh6RMbK,ALzqmFmkf8oOiyS8dylO64" />
+        <Link Id="GCBd4p4CSRSOsiIJpFMM51" Ids="Ke7RbNJ6fWTPRavBFC7mle,GEuLCUcQBGMMUOTTN513Am" />
+        <Link Id="PdJAcvXyAJgNr2tvrJny1q" Ids="DV8IYNDdvcdN2NE2Uwp1EO,UGQ6WUtBkxNL2c0lNxSSv9" />
+        <Link Id="QgMe5GEKwQ1LIAvv7GRgHI" Ids="Gg5BiXpNnebLPXHbpsDAno,KczDOkhfGTBPFabJAYQXRF" />
+        <Link Id="EbMNe3r9MRZLuiF6THd1wG" Ids="Ta3l3Mn0llwPM9WbQPoiBI,U81nvTyFHFYLczOy7qkfy3" />
+        <Link Id="Fk1XEzuYKktLJcXiEMOo6M" Ids="PdDQ8k6VE0mPlyWrqvcTwR,B3oSCfYCc85NvAOCEZ0rtn" />
+        <Link Id="CEU0htizRYQNkOBe539IDx" Ids="LcMqgaE0d3oLStILAVQkBa,GddyH0EOwe5MJlNaAltglW" />
+        <Link Id="AgP6bzB2qsyM3WOWqWiVq0" Ids="Hn3LFU9KXlxP5kZ2VjSpWc,TlyB0FS7kCbNrWDNZzVfrs" />
+        <Link Id="TzoTNcIsJb2QbJ616h5GN4" Ids="SHar7AkKN5PQCJKI5MyQz7,CFunoAkogqVMupk0F18QMf" />
+        <Link Id="HfbGv2iuntaOYV1wct5a4R" Ids="FYJgU2mVl4oNNngFjEiYAh,HPrL9dRuJFoQJO7G3jkZMJ" />
+        <Link Id="CI6iuF7Iee6PImQOQezEtt" Ids="ILUtH3gOFNkNr66lxU3iq8,DTu0c3j2YRsLklFYc5XMA8" />
+        <Link Id="Os9eSfhmwxvMZEs0mtGsg6" Ids="PeWUJnSvxfAOj0w05vLdm8,IDRCAR9EWN9OWhKcqfGO7c" />
+        <Link Id="S8wyy9JfcFjOg03FvmviYu" Ids="NGBUNGJ6RHXPcRUTG8Jh0D,VinTqdbTLXUOh2hRmywF5C" />
+        <Link Id="V2hABqkykQlMmdHW4KiucM" Ids="KJ4OzPAb6eZPIJpp4eTj9M,MeBQQnUDFH1L2eynIUw7Sf" />
+        <Link Id="SLD4RrReYYTMyHhv5X6lLt" Ids="LrQV8392OunPuRtwf9NcIx,FU4RsZFOkWnMmvFsxyBis8" />
+        <Link Id="AKao0Iw6tzDPUD8ETuc9rh" Ids="MAjgJ69fgtJOYB9HwwTPev,ANiglaQbOUXL6AEvwMGp85" />
+        <Link Id="DH5D59fbaPEN9R9uxLVFL2" Ids="PKjo4vK4d1APfefVJcGrW0,GmTHJszJ365PDx0CyuZFak" />
+        <Link Id="Sx3wrvOABnNQRp9wDjkdvu" Ids="Het4NTyGwXhNm3Cj9zACgJ,Rta0ybubF12OTltDEdTraU" />
+        <Link Id="DctXNFa2CE0QVLLZA4uICY" Ids="BtapKJYcPvtMAVmq9QqKS6,J8kf99CKMdnLl7LizP18yC" />
+        <Link Id="DnXKRPa4RsjOki4r47jAai" Ids="CDkD4z9nHB3MRMZuY4a94r,H1EROXrsemkPz9NSQGdnWp" />
+        <Link Id="DBHmWjPdhCkQFkC090p84d" Ids="C7OzNe4LvmrLKaI929RXwW,OYIfVqfcnhbQS8BaOpmkKH" />
+        <Link Id="KUzyQ8WWbbjLPPUfZka4yn" Ids="QslDAxYJ7kPOBH07jhyzwZ,SFxNYqfrF3NLrzpilr0rHX" />
+        <Link Id="QQDaarky6S4Po6KXAzfpDV" Ids="LXfUMUw5RyzMxrQXw2BbWm,RZa4hNHvUmmP63w2TiJFlP" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="AQCBg8jNAGPN9YzJOJYtv6" Location="VL.Stride" Version="2023.5.2" />
+  <NugetDependency Id="HYPonY1PM3pNwEPVD3BK27" Location="VL.IO.ArtNet" Version="1.0.1" />
+  <NugetDependency Id="NbHv0Nr4hIILNsWaAKOqiS" Location="VL.IO.OSC" Version="1.0.19" />
+</Document>

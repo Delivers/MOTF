@@ -1,0 +1,10 @@
+
+*._dynamic_.*.dll
+*._dynamic_.*.pdb
+*~.dds
+
+
+/assets/DDS/
+
+watchdog
+watchdog.txt

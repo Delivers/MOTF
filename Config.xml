@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE ROOT PUBLIC "" ""[]>
+<Model AppVersion="2.0.3" xmlns:r="reflection" r:Version="2">
+  <Commands>
+    <Item Name="Wake On LAN" r:Type="WakeOnLAN [Remoter.Tasks]" />
+    <Item Arguments="" Execution_Arguments="-s -d" Name="Reboot" Timeout="0" r:Type="Reboot [Remoter.Tasks]" />
+    <Item Arguments="/f" Execution_Arguments="-s -d" Name="Shutdown" Timeout="0" r:Type="Shutdown [Remoter.Tasks]" />
+  </Commands>
+  <Credentials Pass="0,Nichts" Username="deliver" />
+  <Groups>
+    <Item Name="All">
+      <IPs />
+      <Selected>
+        <Item>192.168.1.201</Item>
+        <Item>192.168.1.202</Item>
+        <Item>192.168.1.204</Item>
+        <Item>192.168.1.205</Item>
+      </Selected>
+    </Item>
+    <Item Name="Online">
+      <IPs />
+      <Selected />
+    </Item>
+    <Item Name="Offline">
+      <IPs />
+      <Selected />
+    </Item>
+    <Item Name="test">
+      <IPs />
+      <Selected />
+    </Item>
+  </Groups>
+  <Machines>
+    <Item Alias="PC_01" Hostname="DESKTOP-N5KGK1H" IP="192.168.1.201" Mac="b8-ae-ed-7c-c6-d3">
+      <Credentials Pass="0,Nichts" Username="deliver" />
+    </Item>
+    <Item Alias="PC_02" Hostname="DESKTOP-VR2AQ6B" IP="192.168.1.202" Mac="94-c6-91-19-ca-c2">
+      <Credentials Pass="0,Nichts" Username="deliver" />
+    </Item>
+    <Item Alias="PC_04" Hostname="NestTwO.local" IP="192.168.1.204" Mac="74-d4-35-c7-c5-2c">
+      <Credentials Pass="Gold5Cook" Username="Nes.Two" />
+    </Item>
+    <Item Alias="PC_05" Hostname="DESKTOP-KI43FUM.local" IP="192.168.1.205" Mac="d8-bb-c1-98-cf-24">
+      <Credentials Pass="0,Nichts" Username="deliver" />
+    </Item>
+  </Machines>
+  <Tasks>
+    <Item Arguments="" Execution_Arguments="-i -s" Filename="notepad.exe" Name="Run" Next_Task="Kill" r:Type="Run [Remoter.Tasks]" />
+    <Item Custom_Arguments="/mir" Exclude_Files="" Exclude_Folder="" Name="Mirror" Source_Folder="C:\Users\sw\Pictures\test" Target_Folder="C:\Users\User\Desktop\MOTF" r:Type="Mirror [Remoter.Tasks]" />
+    <Item Arguments="/f" Execution_Arguments="-s" Name="Kill" Next_Task="" ProcessID_To_Kill="" Task_Name_To_Kill="notepad.exe" r:Type="Kill [Remoter.Tasks]" />
+    <Item Arguments="" Execution_Arguments="-i -s" Filename="netplwiz.exe" Name="netplwiz" Next_Task="" r:Type="Run [Remoter.Tasks]" />
+    <Item Arguments="clone https://github.com/Delivers/MOTF.git C:\Users\User\Desktop\MOTF" Execution_Arguments="-i -s" Filename="git.exe" Name="git clone" Next_Task="" r:Type="Run [Remoter.Tasks]" />
+    <Item Arguments="127.0.0.1 -t" Execution_Arguments="-i -s" Filename="ping.exe" Name="ping" Next_Task="" r:Type="Run [Remoter.Tasks]" />
+    <Item Arguments="/c mkdir C:\Users\User\Documents\MOTF" Execution_Arguments="-i -s" Filename="cmd.exe" Name="CreateFolder" Next_Task="" r:Type="Run [Remoter.Tasks]" />
+    <Item Arguments="/c rmdir /s /q C:\Users\User\Documents\MOTF" Execution_Arguments="-i -s" Filename="cmd.exe" Name="DeleteFolder" Next_Task="" r:Type="Run [Remoter.Tasks]" />
+  </Tasks>
+</Model>
